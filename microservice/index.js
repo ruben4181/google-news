@@ -1,6 +1,9 @@
 const express = require("express");
 const app = express();
+var cors = require('cors');
 const port = 1217;
+
+app.use(cors());
 
 app.get("/news-beans", (req, res)=>{
   let response = require("./scrapping_data/bean_news.json");
